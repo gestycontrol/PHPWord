@@ -168,8 +168,8 @@ class Html
      */
     protected static function parseNode($node, $element, $styles = [], $data = []): void
     {
-        if(!$node) return;
-        
+        if(is_null($node)) return;
+
         // Populate styles array
         $styleTypes = ['font', 'paragraph', 'list', 'table', 'row', 'cell'];
         foreach ($styleTypes as $styleType) {
